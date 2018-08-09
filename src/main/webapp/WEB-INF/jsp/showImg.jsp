@@ -15,10 +15,10 @@
 <br>
 <br>
 <br>
-图片名称：${fileName}
+<p style="color: darkmagenta"> 图片名称：${fileName}</p>
 <br>
 <br>
-上传时间：${now}
+<p style="color: aqua" >上传时间：${now}</p>
 <br>
 <br>
 <br>
