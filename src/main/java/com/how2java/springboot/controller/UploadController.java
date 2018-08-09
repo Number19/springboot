@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * @Author sya
@@ -34,7 +37,13 @@ public class UploadController {
             destFile.getParentFile().mkdirs();
             file.transferTo(destFile);
 
+            Date date = new Date();
+            SimpleDateFormat ss = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+            String now = ss.format(date);
+
+
             m.addAttribute("fileName",fileName);
+            m.addAttribute("now",now);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             return "上传失败，"+e.getMessage();

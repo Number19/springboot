@@ -11,9 +11,18 @@
     <title>Title</title>
 </head>
 <body>
-图片：${fileName}
+<br>
+<br>
+<br>
+<br>
+图片名称：${fileName}
+<br>
+<br>
+上传时间：${now}
+<br>
+<br>
+<br>
 <img src="/upload/${fileName}">
-
 
 </body>
 </html>
